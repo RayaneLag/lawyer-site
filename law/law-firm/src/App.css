@@ -1,0 +1,262 @@
+body,
+html {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 0 20px;
+}
+
+.nav-logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+}
+
+/* Modification: Suppression des styles spécifiques pour le burger et ajustement pour les écrans plus petits */
+@media screen and (max-width: 768px) {
+  .nav-links li a {
+    padding: 10px 10px;
+  }
+  .nav-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .burger {
+    display: none; /* Cache le burger menu puisqu'il n'est plus nécessaire */
+  }
+}
+
+/* HomePage spécifique */
+
+.home-page-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url("https://i.etsystatic.com/8684670/r/il/8275f2/4644072842/il_fullxfull.4644072842_ik5o.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px);
+  z-index: -1; /* Assurez que le fond est derrière le contenu */
+}
+
+/* Assurez-vous que le .container de la HomePage ne soit pas affecté par le positionnement absolu du fond */
+.home-page-container {
+  position: relative;
+  z-index: 2; /* Garde le contenu au-dessus du fond flou */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+/* Changement de la couleur du texte et ajout de l'animation */
+.home-page-container h1,
+.home-page-container p {
+  color: #ffffff; /* Exemple de couleur bleue, ajustez selon vos besoins */
+  animation: fadeIn 2s ease-out;
+}
+
+/* Définition de l'animation fadeIn */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* AboutPage spécifique */
+/* Spécifique pour AboutPage */
+.about-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  max-width: 800px;
+  margin: 40px auto;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.about-page-container h1 {
+  margin-top: 0;
+  color: #007bff;
+}
+
+.about-page-container p {
+  font-size: 18px;
+}
+
+/* Ajout d'un style pour les éventuels boutons ou liens */
+.about-page-container a {
+  display: inline-block;
+  background: #007bff;
+  color: white;
+  padding: 10px 20px;
+  margin: 20px 0;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.about-page-container a:hover {
+  background: #0056b3;
+}
+
+/* ServicesPage spécifique */
+
+/* Spécifique pour ServicesPage */
+.services-page-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url("https://img.freepik.com/premium-photo/smart-law-legal-advice-icons-astute-lawyer-working-tools-lawyers-office_31965-90557.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px);
+  z-index: -1;
+}
+
+.services-page-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.services-page {
+  width: 100%; /* Ajustez selon le besoin, pour contrôler la largeur du contenu de la page */
+}
+
+/* Change la couleur du texte du h1 sur ServicesPage en blanc */
+.services-page-container h1 {
+  color: #ffffff; /* Couleur blanche */
+}
+
+.services-page ul {
+  background-color: #e9ecef;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.services-page li {
+  margin: 10px 0;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease; /* Animation douce pour le changement de couleur */
+  cursor: pointer;
+}
+
+.services-page li:hover {
+  background-color: #007bff; /* Change la couleur de fond au survol */
+  color: #ffffff; /* Change la couleur du texte en blanc pour un meilleur contraste */
+  transform: scale(1.05);
+}
+
+/* ContactPage spécifique */
+
+.contact-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 40px;
+  background-color: #f0f2f5; /* Un fond doux pour la page de contact */
+  color: #333; /* Couleur de texte principale */
+}
+
+.contact-info {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-info h1 {
+  margin-bottom: 0.5em;
+  color: #0056b3; /* Couleur pour donner un aspect professionnel et confiant */
+}
+
+.contact-info p {
+  margin-bottom: 1em;
+}
+
+.form-contact {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ajoute une ombre pour un effet de profondeur */
+  max-width: 400px; /* Assure que le formulaire n'est pas trop large */
+}
+
+.form-contact input[type="text"],
+.form-contact input[type="email"],
+.form-contact textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.form-contact input[type="submit"] {
+  background-color: #0056b3;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-contact input[type="submit"]:hover {
+  background-color: #003d7a;
+}
